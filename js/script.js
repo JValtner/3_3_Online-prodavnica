@@ -21,21 +21,11 @@ tabela.style.textAlign = "center"
 
 for(let artikal of artikli){
     let tr = document.createElement("tr")
-    
 
     let jedinstveniBroj= document.createElement("td") 
     let naziv= document.createElement("td") 
     let cena= document.createElement("td") 
     let dostupnost= document.createElement("td") 
-
-    jedinstveniBroj.style.border = "1px solid black"
-    jedinstveniBroj.style.borderCollapse = "collapse"
-    naziv.style.border = "1px solid black"
-    naziv.style.borderCollapse = "collapse"
-    cena.style.border = "1px solid black"
-    cena.style.borderCollapse = "collapse"
-    dostupnost.style.border = "1px solid black"
-    dostupnost.style.borderCollapse = "collapse"
 
     jedinstveniBroj.textContent = artikal.jedinstveniBroj
     naziv.textContent = artikal.naziv
@@ -58,8 +48,20 @@ for(let artikal of artikli){
     tr.appendChild(cena)
     tr.appendChild(dostupnost)
     tabela.appendChild(tr)
-
 }
+
+let ths = document.querySelectorAll("th")
+for (let th of ths) {
+  th.style.border = "1px solid black"
+}
+
+let tds = document.querySelectorAll("td")
+for (let td of tds) {
+    td.style.border = "1px solid black"
+    td.style.padding = "5px"
+  }
+
+
          
     
      
